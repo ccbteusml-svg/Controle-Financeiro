@@ -1,0 +1,15 @@
+{
+  "name": "Caderno Financeiro",
+  "short_name": "Finanças",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#333333",
+  "theme_color": "#268bd2",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2910/2910768.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

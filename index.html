@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Caderno Financeiro</title>
+    <link rel="manifest" href="manifest.json"> <link rel="stylesheet" href="style.css">   </head>
+<body>
+
+    <div id="notebook"></div>
+
+    <button id="fab" onclick="openModal()">+</button>
+
+    <div id="modal">
+        <div class="modal-content">
+            <h3>Novo Registro</h3>
+            <input type="hidden" id="editIndex">
+            <input type="text" id="inputMonth" placeholder="Mês (Ex: Jan/26)">
+            <input type="number" id="inputSalary" step="0.01" placeholder="Salário Líquido (R$)">
+            <input type="number" id="inputAdvance" step="0.01" placeholder="Adiantamento (R$)">
+            <input type="number" id="inputFood" step="0.01" placeholder="Refeição (R$)">
+            
+            <label class="file-label">
+                📎 Anexar Foto/Comprovante
+                <input type="file" id="inputPhoto" accept="image/*">
+            </label>
+            
+            <div class="modal-btns">
+                <button class="btn-cancel" onclick="closeModal()">Cancelar</button>
+                <button class="btn-confirm" onclick="saveData()">Salvar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script> <script>
+        // Registra o Service Worker para funcionar offline
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+</body>
+</html>
